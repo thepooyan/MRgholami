@@ -1,0 +1,25 @@
+/*-------------VARIABLES-----------------*/
+$padding: 25px;
+
+$greyMain: #363636;
+$greyDark: #222222;
+$greyMilky: #5e5d5a;
+
+/*-------------MIXINS-----------------*/
+@mixin flex ($just, $align, $dir:row){
+    display: flex;
+        @if $just == c { $just: center; }
+        @if $just == s { $just: flex-start; }
+        @if $just == e { $just: flex-end; }
+        @if $just == sa { $just: space-around; }
+        @if $just == sb { $just: space-between; }
+        @if $just == se { $just: space-evenly; }
+        @if $align == c { $align: center; }
+        @if $align == s { $align: flex-start; }
+        @if $align == e { $align: flex-end; }
+
+        @if $align == none {$align: initial}
+    justify-content: $just;
+    align-items: $align;
+    flex-direction: $dir;
+}
