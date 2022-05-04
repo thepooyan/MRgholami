@@ -1,9 +1,17 @@
 /*-------------VARIABLES-----------------*/
 $padding: 25px;
 
+$white: #c6c6c6;
+$whiteBorder: #999;
+$whiteFooterFadeText: #999;
+
 $greyMain: #363636;
 $greyDark: #222222;
 $greyMilky: #5e5d5a;
+
+$orangeMain: #b5985a;
+
+$orangeTitleBar: #ac996f;
 
 /*-------------MIXINS-----------------*/
 @mixin flex ($just, $align, $dir:row){
