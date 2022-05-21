@@ -1,6 +1,8 @@
 @import "_variables.scss";
 body {
-  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
   margin: 0;
   padding: 0;
   direction: rtl;
@@ -14,6 +16,81 @@ body {
   color: $white;
 }
 
+#modals {
+  background: #0f0f0f82;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  > * {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 95%;
+  }
+  .placeOrder {
+    top: 13%;
+    border: 1px solid black;
+    width: 65%;
+    height: 65%;
+    background-color: #e2e2e2;
+    padding: $padding;
+    nav {
+      background-color: grey;
+      padding: 0 10px;
+      button {
+        color: white;
+        border: none;
+        padding: 12px 5px;
+        background: none;
+        margin-left: 10px;
+      }
+    }
+    .addItem {
+      @include flex(sb, e);
+      padding: 15px 0;
+      .wrap {
+        width: 15%;
+        input {
+          width: 90%;
+          background-color: #fff;
+          border: 1px solid $whiteBorder;
+          font-size: 11px;
+          padding: 2px 5px;
+          margin-top: 3px;
+          &:focus {
+            outline: none;
+          }
+        }
+        label {
+          display: block;
+          color: black;
+          font-size: 12px;
+        }
+      }
+      button {
+        color: white;
+        background-color: $orangeMain;
+        border: none;
+        padding: 3px 0;
+        width: 10%;
+        border-radius: 9px;
+        font-size: 12px;
+      }
+    }
+    .selectedItems {
+        border: 1px solid black;
+        border-radius: $gridRadius;
+        padding: $padding/2;
+        .item {
+            background-color: grey;
+            color: black;
+            font-size: 13px;
+        }
+    }
+  }
+}
+
 .mainCont {
   height: 100vh;
   @include flex(sb, none, column);
@@ -21,7 +98,7 @@ body {
   background-color: $greyMain;
 
   .titleBar {
-    flex: 1;
+    flex: 0.6;
     text-align: center;
     padding: 10px 0;
     @include flex(c, c);
@@ -30,7 +107,7 @@ body {
   }
 
   nav {
-    flex: 2;
+    flex: 2.4;
     @include flex(sb, c);
     padding: 0 $padding;
     background-color: $greyDark;
@@ -43,12 +120,12 @@ body {
         color: black;
         background-color: #b5985a;
         border: 1px solid #eeeeee;
-        border-radius: 5px ;
+        border-radius: 5px;
         padding: 6px 14px;
         font-size: 11px;
       }
       a:nth-child(2) {
-          color: $orangeMain;
+        color: $orangeMain;
       }
     }
     .lSide {
@@ -65,53 +142,52 @@ body {
     grid-template-columns: 20% auto;
     grid-template-rows: 20% auto;
     background-color: $greyMilky;
-    $gridRadius: 6px;
     > * {
-        margin: $gridBoxMargin;
+      margin: $gridBoxMargin;
     }
     .topRight {
-        border: 1px solid black;
+      border: 1px solid black;
     }
     .topLeft {
-        @include flex(c,c);
-        gap: 30px;
-        .buyItem {
-            border: 2px solid $orangeMain;
-            border-radius: $gridRadius;
-            color: $white;
-            padding: $padding;
-            transition: .1s;
+      @include flex(c, c);
+      gap: 30px;
+      .buyItem {
+        border: 2px solid $orangeMain;
+        border-radius: $gridRadius;
+        color: $white;
+        padding: $padding;
+        transition: 0.1s;
 
-            &:hover {
-                cursor: pointer;
-                border-color: #fff;
-                background-color: rgba(110,110,110,.6);
-            }
+        &:hover {
+          cursor: pointer;
+          border-color: #fff;
+          background-color: rgba(110, 110, 110, 0.6);
         }
+      }
     }
     .bottomRight {
-        border: 1px solid $whiteBorder;
-        background-color: rgba(181,152,90,.4);
+      border: 1px solid $whiteBorder;
+      background-color: rgba(181, 152, 90, 0.4);
+      border-radius: $gridRadius;
+      @include flex(se, c, column);
+      .item {
+        font-size: 12px;
+        color: #222;
         border-radius: $gridRadius;
-        @include flex(se,c,column);
-        .item {
-            font-size: 12px;
-            color: #222;
-            border-radius: $gridRadius;
-            background-color: rgb(167, 165, 165);
-            text-align: center;
-            border: none;
-            width: 140px;
-            padding: 10px 0;
-            &:hover {
-                cursor: pointer;
-            }
+        background-color: rgb(167, 165, 165);
+        text-align: center;
+        border: none;
+        width: 140px;
+        padding: 10px 0;
+        &:hover {
+          cursor: pointer;
         }
+      }
     }
     .bottomLeft {
-        border: 1px solid $whiteBorder;
-        border-radius: $gridRadius;
-        background-color: rgba(110,110,110,.6);
+      border: 1px solid $whiteBorder;
+      border-radius: $gridRadius;
+      background-color: rgba(110, 110, 110, 0.6);
     }
   }
 

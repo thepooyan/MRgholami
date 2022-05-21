@@ -13,6 +13,9 @@ $orangeMain: #b5985a;
 
 $orangeTitleBar: #ac996f;
 
+
+$gridRadius: 6px;
+
 /*-------------MIXINS-----------------*/
 @mixin flex ($just, $align, $dir:row){
     display: flex;
