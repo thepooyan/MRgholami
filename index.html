@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="modals">
-        <div class="placeOrder">
+    <section id="modals" class="active">
+        <div class="overlay"></div>
+        <div class="placeOrder active">
             <nav>
                 <button>ثبت سفارش</button>
                 <button>جایگاه عطریاس</button>
@@ -63,6 +64,40 @@
                     <span>آیتم 1</span>
                 </div>
             </div>
+            <div class="bottom">
+                <div class="col">
+                    <div class="row">
+                        <div class="item">
+                            مجموع پرداخت:
+                            <span class="price">2,700,000</span>
+                        </div>
+                        <div class="item">
+                            تاریخ درخواست:
+                            <span>02/02/1401</span>
+                        </div>
+                        <div class="item">
+                            شماره سند درخواست:
+                            <span>78153264</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="item">
+                            مبلغ بدهی:
+                            <span class="price">2,700,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        مجموع پرداخت:
+                        <span class="price">2,700,00</span>
+                    </div>
+                    <div class="button">
+                        ثبت نهایی و ارسال به درگاه بانک
+                    </div>
+                </div>
+                <img src="Assets/img/60577.png" alt="">                
+            </div>
         </div>
     </section>
     <main class="mainCont">
@@ -109,5 +144,7 @@
             <a href="#">www.Company.com</a>
         </footer>
     </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
