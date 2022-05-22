@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="modals" class="active">
+    <section id="modals" class="">
         <div class="overlay"></div>
-        <div class="placeOrder active">
+        <div class="placeOrder">
             <nav>
                 <button>ثبت سفارش</button>
                 <button>جایگاه عطریاس</button>
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="row">
+                    <div class="item">
                         مجموع پرداخت:
                         <span class="price">2,700,00</span>
                     </div>
@@ -117,7 +117,6 @@
 
         <section class="grid">
             <div class="topRight">
-                tr
             </div>
             <div class="topLeft">
                 <div class="buyItem">خرید فراورده های 1</div>
@@ -125,16 +124,16 @@
                 <div class="buyItem">خرید فراورده های 3</div>
             </div>
             <div class="bottomRight">
-                <button class="item">آیتم 1</button>
-                <button class="item">آیتم 2</button>
-                <button class="item">آیتم 3</button>
-                <button class="item">آیتم 4</button>
-                <button class="item">آیتم 5</button>
-                <button class="item">آیتم 6</button>
-                <button class="item">آیتم 7</button>
+                <button class="item" data-target="item">آیتم 1</button>
+                <button class="item" data-target="item">آیتم 2</button>
+                <button class="item" data-target="item">آیتم 3</button>
+                <button class="item" data-target="item">آیتم 4</button>
+                <button class="item" data-target="item">آیتم 5</button>
+                <button class="item" data-target="item">آیتم 6</button>
+                <button class="item" data-target="item">آیتم 7</button>
             </div>
             <div class="bottomLeft">
-                bl
+                <button id="item">نمایش آیتم</button>
             </div>
         </section>
 
