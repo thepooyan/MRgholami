@@ -42,7 +42,7 @@ body {
     background-color: #e2e2e2;
     padding: $padding;
     display: none;
-    font-size: 13px;
+    font-size: .8125rem;
     nav {
       background-color: grey;
       padding: 0 10px;
@@ -63,7 +63,7 @@ body {
           width: 90%;
           background-color: #fff;
           border: 1px solid $whiteBorder;
-          font-size: 11px;
+          font-size: .6875rem;
           padding: 2px 5px;
           margin-top: 3px;
           &:focus {
@@ -73,7 +73,7 @@ body {
         label {
           display: block;
           color: black;
-          font-size: 12px;
+          font-size: .75em;
         }
       }
       button {
@@ -83,7 +83,7 @@ body {
         padding: 3px 0;
         width: 10%;
         border-radius: 9px;
-        font-size: 12px;
+        font-size: .75em;
       }
     }
     .selectedItems {
@@ -98,7 +98,10 @@ body {
       .item {
         background-color: grey;
         color: black;
-        font-size: 13px;
+        font-size: .8125em;
+        display: flex;
+        gap: 30px;    
+        padding: 8px;    
       }
     }
     .bottom {
@@ -153,7 +156,7 @@ body {
     text-align: center;
     padding: 10px 0;
     @include flex(c, c);
-    font-size: 13px;
+    font-size: .8125em;
     color: $orangeTitleBar;
   }
 
@@ -162,7 +165,7 @@ body {
     @include flex(sb, c);
     padding: 0 $padding;
     background-color: $greyDark;
-    font-size: 12px;
+    font-size: .75em;
     .rSide {
       a {
         margin-left: 10px;
@@ -173,14 +176,14 @@ body {
         border: 1px solid #eeeeee;
         border-radius: 5px;
         padding: 6px 14px;
-        font-size: 11px;
+        font-size: .6875em;
       }
       a:nth-child(2) {
         color: $orangeMain;
       }
     }
     .lSide {
-      font-size: 18px;
+      font-size: 1.125em;
       color: $orangeMain;
     }
   }
@@ -222,7 +225,7 @@ body {
       border-radius: $gridRadius;
       @include flex(se, c, column);
       .item {
-        font-size: 12px;
+        font-size: .75em;
         color: #222;
         border-radius: $gridRadius;
         background-color: rgb(167, 165, 165);
@@ -247,7 +250,7 @@ body {
     text-align: center;
     @include flex(c, c, column);
     gap: 7px;
-    font-size: 12px;
+    font-size: .75em;
     color: $whiteFooterFadeText;
     span,
     a {
