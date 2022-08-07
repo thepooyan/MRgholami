@@ -13,7 +13,7 @@ body {
   p {
     margin: 0;
   }
-  color: $white;
+  color: var(--white);
 }
 
 #modals {
@@ -40,7 +40,7 @@ body {
     width: 65%;
     height: 75%;
     background-color: #e2e2e2;
-    padding: $padding;
+    padding: var(--padding);
     display: none;
     font-size: .8125rem;
     opacity: .89;
@@ -63,7 +63,7 @@ body {
         input {
           width: 90%;
           background-color: #fff;
-          border: 1px solid $whiteBorder;
+          border: 1px solid var(--whiteBorder);
           font-size: .6875rem;
           padding: 2px 5px;
           margin-top: 3px;
@@ -79,7 +79,7 @@ body {
       }
       button {
         color: white;
-        background-color: $orangeMain;
+        background-color: var(--orangeMain);
         border: none;
         padding: 3px 0;
         width: 10%;
@@ -89,8 +89,8 @@ body {
     }
     .selectedItems {
       border: 1px solid #727272;
-      border-radius: $gridRadius;
-      padding: $padding/2;
+      border-radius: var(--gridRadius);
+      padding: calc(var(--padding)/2);
       height: 46%;
       margin: 2% 0;
       @include flex(fs, none, column);
@@ -141,9 +141,9 @@ body {
           }
         }
         .button {
-          background-color: $orangeMain;
+          background-color: var(--orangeMain);
           color: white;
-          border-radius: $gridRadius;
+          border-radius: var(--gridRadius);
           text-align: center;
           font-weight: bold;
         }
@@ -168,7 +168,7 @@ body {
   height: 100vh;
   @include flex(sb, none, column);
   width: 100%;
-  background-color: $greyMain;
+  background-color: var(--greyMain);
 
   .titleBar {
     flex: 0.6;
@@ -176,14 +176,14 @@ body {
     padding: 10px 0;
     @include flex(c, c);
     font-size: .8125em;
-    color: $orangeTitleBar;
+    color: var(--orangeTitleBar);
   }
 
   nav {
     flex: 2.4;
     @include flex(sb, c);
-    padding: 0 $padding;
-    background-color: $greyDark;
+    padding: 0 var(--padding);
+    background-color: var(--greyDark);
     font-size: .75rem;
     .rSide {
       a {
@@ -198,25 +198,25 @@ body {
         font-size: .6875rem;
       }
       a:nth-child(2) {
-        color: $orangeMain;
+        color: var(--orangeMain);
       }
     }
     .lSide {
       font-size: 1.125em;
-      color: $orangeMain;
+      color: var(--orangeMain);
     }
   }
 
   section.grid {
-    $gridBoxMargin: 10px;
+    --gridBoxMargin: 10px;
     flex: 20;
-    padding: $padding - $gridBoxMargin;
+    padding: calc(var(--padding) - var(--gridBoxMargin));
     display: grid;
     grid-template-columns: 20% auto;
     grid-template-rows: 20% auto;
-    background-color: $greyMilky;
+    background-color: var(--greyMilky);
     > * {
-      margin: $gridBoxMargin;
+      margin: var(--gridBoxMargin);
     }
     .topRight {
       border: 1px solid black;
@@ -225,10 +225,10 @@ body {
       @include flex(c, c);
       gap: 30px;
       .buyItem {
-        border: 2px solid $orangeMain;
-        border-radius: $gridRadius;
-        color: $white;
-        padding: $padding;
+        border: 2px solid var(--orangeMain);
+        border-radius: var(--gridRadius);
+        color: var(--white);
+        padding: var(--padding);
         transition: 0.1s;
 
         &:hover {
@@ -239,14 +239,14 @@ body {
       }
     }
     .bottomRight {
-      border: 1px solid $whiteBorder;
+      border: 1px solid var(--whiteBorder);
       background-color: rgba(181, 152, 90, 0.4);
-      border-radius: $gridRadius;
+      border-radius: var(--gridRadius);
       @include flex(se, c, column);
       .item {
         font-size: .75rem;
         color: #222;
-        border-radius: $gridRadius;
+        border-radius: var(--gridRadius);
         background-color: rgb(167, 165, 165);
         text-align: center;
         border: none;
@@ -258,16 +258,16 @@ body {
       }
     }
     .bottomLeft {
-      border: 1px solid $whiteBorder;
-      border-radius: $gridRadius;
+      border: 1px solid var(--whiteBorder);
+      border-radius: var(--gridRadius);
       background-color: rgba(110, 110, 110, 0.6);
       padding: 20px;
       button {
-        background-color: $orangeMain;
+        background-color: var(--orangeMain);
         color: white;
         font-weight: bold;
         padding: 10px 20px;
-        border-radius: $gridRadius;
+        border-radius: var(--gridRadius);
         border: none;
         font-family: inherit;
         display: block;
@@ -286,7 +286,7 @@ body {
     @include flex(c, c, column);
     gap: 7px;
     font-size: .75rem;
-    color: $whiteFooterFadeText;
+    color: var(--whiteFooterFadeText);
     span,
     a {
       display: block;

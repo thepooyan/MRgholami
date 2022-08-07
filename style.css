@@ -1,11 +1,24 @@
 @charset "UTF-8";
 /*-------------VARIABLES-----------------*/
+:root {
+  --padding: 25px;
+  --white: #c6c6c6;
+  --whiteBorder: #999;
+  --whiteFooterFadeText: #999;
+  --greyMain: #363636;
+  --greyDark: #222222;
+  --greyMilky: #5e5d5a;
+  --orangeMain: #b5985a;
+  --orangeTitleBar: #ac996f;
+  --gridRadius: 6px;
+}
+
 /*-------------MIXINS-----------------*/
 body {
   margin: 0;
   padding: 0;
   direction: rtl;
-  color: #c6c6c6;
+  color: var(--white);
 }
 
 body * {
@@ -47,7 +60,7 @@ body p {
   width: 65%;
   height: 75%;
   background-color: #e2e2e2;
-  padding: 25px;
+  padding: var(--padding);
   display: none;
   font-size: .8125rem;
   opacity: .89;
@@ -90,7 +103,7 @@ body p {
 #modals .placeOrder .addItem .wrap input {
   width: 90%;
   background-color: #fff;
-  border: 1px solid #999;
+  border: 1px solid var(--whiteBorder);
   font-size: .6875rem;
   padding: 2px 5px;
   margin-top: 3px;
@@ -108,7 +121,7 @@ body p {
 
 #modals .placeOrder .addItem button {
   color: white;
-  background-color: #b5985a;
+  background-color: var(--orangeMain);
   border: none;
   padding: 3px 0;
   width: 10%;
@@ -118,8 +131,8 @@ body p {
 
 #modals .placeOrder .selectedItems {
   border: 1px solid #727272;
-  border-radius: 6px;
-  padding: 12.5px;
+  border-radius: var(--gridRadius);
+  padding: calc(var(--padding)/2);
   height: 46%;
   margin: 2% 0;
   display: -webkit-box;
@@ -232,9 +245,9 @@ body p {
 }
 
 #modals .placeOrder .bottom .col .button {
-  background-color: #b5985a;
+  background-color: var(--orangeMain);
   color: white;
-  border-radius: 6px;
+  border-radius: var(--gridRadius);
   text-align: center;
   font-weight: bold;
 }
@@ -283,7 +296,7 @@ body p {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  background-color: #363636;
+  background-color: var(--greyMain);
 }
 
 .mainCont .titleBar {
@@ -306,7 +319,7 @@ body p {
       -ms-flex-direction: row;
           flex-direction: row;
   font-size: .8125em;
-  color: #ac996f;
+  color: var(--orangeTitleBar);
 }
 
 .mainCont nav {
@@ -326,8 +339,8 @@ body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 0 25px;
-  background-color: #222222;
+  padding: 0 var(--padding);
+  background-color: var(--greyDark);
   font-size: .75rem;
 }
 
@@ -345,30 +358,31 @@ body p {
 }
 
 .mainCont nav .rSide a:nth-child(2) {
-  color: #b5985a;
+  color: var(--orangeMain);
 }
 
 .mainCont nav .lSide {
   font-size: 1.125em;
-  color: #b5985a;
+  color: var(--orangeMain);
 }
 
 .mainCont section.grid {
+  --gridBoxMargin: 10px;
   -webkit-box-flex: 20;
       -ms-flex: 20;
           flex: 20;
-  padding: 15px;
+  padding: calc(var(--padding) - var(--gridBoxMargin));
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% auto;
       grid-template-columns: 20% auto;
   -ms-grid-rows: 20% auto;
       grid-template-rows: 20% auto;
-  background-color: #5e5d5a;
+  background-color: var(--greyMilky);
 }
 
 .mainCont section.grid > * {
-  margin: 10px;
+  margin: var(--gridBoxMargin);
 }
 
 .mainCont section.grid .topRight {
@@ -393,10 +407,10 @@ body p {
 }
 
 .mainCont section.grid .topLeft .buyItem {
-  border: 2px solid #b5985a;
-  border-radius: 6px;
-  color: #c6c6c6;
-  padding: 25px;
+  border: 2px solid var(--orangeMain);
+  border-radius: var(--gridRadius);
+  color: var(--white);
+  padding: var(--padding);
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
@@ -408,9 +422,9 @@ body p {
 }
 
 .mainCont section.grid .bottomRight {
-  border: 1px solid #999;
+  border: 1px solid var(--whiteBorder);
   background-color: rgba(181, 152, 90, 0.4);
-  border-radius: 6px;
+  border-radius: var(--gridRadius);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -429,7 +443,7 @@ body p {
 .mainCont section.grid .bottomRight .item {
   font-size: .75rem;
   color: #222;
-  border-radius: 6px;
+  border-radius: var(--gridRadius);
   background-color: #a7a5a5;
   text-align: center;
   border: none;
@@ -442,18 +456,18 @@ body p {
 }
 
 .mainCont section.grid .bottomLeft {
-  border: 1px solid #999;
-  border-radius: 6px;
+  border: 1px solid var(--whiteBorder);
+  border-radius: var(--gridRadius);
   background-color: rgba(110, 110, 110, 0.6);
   padding: 20px;
 }
 
 .mainCont section.grid .bottomLeft button {
-  background-color: #b5985a;
+  background-color: var(--orangeMain);
   color: white;
   font-weight: bold;
   padding: 10px 20px;
-  border-radius: 6px;
+  border-radius: var(--gridRadius);
   border: none;
   font-family: inherit;
   display: block;
@@ -485,7 +499,7 @@ body p {
           flex-direction: column;
   gap: 7px;
   font-size: .75rem;
-  color: #999;
+  color: var(--whiteFooterFadeText);
 }
 
 .mainCont footer span,
