@@ -2,3 +2,5 @@ remove all px
 revisit modal part
 revisit unnecceary classname
 comment for app
+
+about five hourse till now?

@@ -164,7 +164,7 @@ body p {
 }
 
 #modals .placeOrder .bottom {
-  font-size: .75rem;
+  font-size: .7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,17 +182,27 @@ body p {
 
 #modals .placeOrder .bottom .col {
   padding: 10px 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 12px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  row-gap: 1em;
+}
+
+#modals .placeOrder .bottom .col span {
+  color: black;
+}
+
+#modals .placeOrder .bottom .col span.price {
+  background-color: white;
+  padding: 0 .4em;
+}
+
+#modals .placeOrder .bottom .col span.price::after {
+  content: 'ریال';
+  margin-right: .4em;
 }
 
 #modals .placeOrder .bottom .col:first-child {
@@ -250,6 +260,9 @@ body p {
   border-radius: var(--gridRadius);
   text-align: center;
   font-weight: bold;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 /3;
 }
 
 #modals .placeOrder .bottom img {

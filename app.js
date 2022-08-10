@@ -28,3 +28,5 @@ document.querySelectorAll(`[data-onclick]`).forEach(i=>{
         eval(i.dataset.onclick)        
     })
 })
+
+openModal('placeOrder')
